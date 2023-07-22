@@ -1,6 +1,5 @@
 import fastify from 'fastify'
 import fetch from 'node-fetch'
-import type { FastifyRequest } from 'fastify'
 import Queue from 'queue'
 
 const server = fastify()
@@ -28,17 +27,17 @@ server.get('/ping', async (request, reply) => {
     return 'pong\n'
 })
 
-let utxo_tree = {};
-let nullifier_tree = {};
+// let utxo_tree = {};
+// let nullifier_tree = {};
 
 let global_mempool = new Queue({ results: [] })
 let processingQueue = false;
 
-interface Query {
-    input_utxos: [string],
-    output_utxos: [string],
-    signatures: [string],
-}
+// interface Query {
+//     input_utxos: [string],
+//     output_utxos: [string],
+//     signatures: [string],
+// }
 
 interface IReply {
     200: { success: boolean };

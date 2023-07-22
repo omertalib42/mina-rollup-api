@@ -8,15 +8,13 @@ interface IPostBody {
 
 function toHex(str: string) {
     var result = '';
-    for (var i=0; i<str.length; i++) {
-      result += str.charCodeAt(i).toString(16);
+    for (var i = 0; i < str.length; i++) {
+        result += str.charCodeAt(i).toString(16);
     }
     return result;
-  }
+}
 
-// this function gets an array of objects
-// and then hashes them together (sequentially) and prints the result 
-// async function hashData(data: Array<{ [key: string]: any }>) {
+
 async function hashData(data: any) {
     let hash: string = '';
     for (let i = 0; i < data.length; i++) {
