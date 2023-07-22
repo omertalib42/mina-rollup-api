@@ -7,7 +7,7 @@ const server = fastify()
 const { spawn } = require('child_process');
 
 // Start the server script in a separate process
-const serverProcess = spawn('node', ['prover.js']);
+const serverProcess = spawn('node', ['./build/prover.js']);
 
 // Optional: Log output from the server script
 serverProcess.stdout.on('data', (data: any) => {

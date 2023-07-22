@@ -2,11 +2,11 @@
   "name": "mina-rollup-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p tsconfig.json",
-    "start": "node index.js"
+    "start": "node ./build/index.js"
   },
   "keywords": [],
   "author": "",

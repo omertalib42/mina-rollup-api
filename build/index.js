@@ -10,7 +10,7 @@ const queue_1 = __importDefault(require("queue"));
 const server = (0, fastify_1.default)();
 const { spawn } = require('child_process');
 // Start the server script in a separate process
-const serverProcess = spawn('node', ['prover.js']);
+const serverProcess = spawn('node', ['./build/prover.js']);
 // Optional: Log output from the server script
 serverProcess.stdout.on('data', (data) => {
     console.log(`Server: ${data}`);
@@ -24,8 +24,8 @@ serverProcess.on('close', (code) => {
 server.get('/ping', async (request, reply) => {
     return 'pong\n';
 });
-let utxo_tree = {};
-let nullifier_tree = {};
+// let utxo_tree = {};
+// let nullifier_tree = {};
 let global_mempool = new queue_1.default({ results: [] });
 exports.global_mempool = global_mempool;
 let processingQueue = false;

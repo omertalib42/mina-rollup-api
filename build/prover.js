@@ -12,9 +12,6 @@ function toHex(str) {
     }
     return result;
 }
-// this function gets an array of objects
-// and then hashes them together (sequentially) and prints the result 
-// async function hashData(data: Array<{ [key: string]: any }>) {
 async function hashData(data) {
     let hash = '';
     for (let i = 0; i < data.length; i++) {
