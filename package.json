@@ -1,0 +1,26 @@
+{
+  "name": "mina-rollup-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-queue": "^3.8.12",
+    "fastify": "^4.20.0",
+    "node-fetch": "^2.6.6",
+    "queue": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/better-queue": "^3.8.3",
+    "@types/node": "^20.4.3",
+    "@types/node-fetch": "^2.6.4",
+    "typescript": "^5.1.6"
+  }
+}
